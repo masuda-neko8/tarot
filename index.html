@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Markdown表示</title>
+
+  <!-- 表示用スタイル -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Markdown→HTML変換ライブラリ（marked.js）をCDNから読み込み -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/12.0.2/marked.min.js"></script>
+</head>
+<body>
+
+  <!-- トップ画像（images/から読み込んだ画像が入る） -->
+  <div class="top-image-container">
+    <img id="top-image" src="" alt="ヘッダー画像" style="max-width: 100%; height: auto; display: none;">
+  </div>
+
+  <!-- 上部メニューバー（contents/menu.csvから読み込んだ内容が入る） -->
+  <nav id="menu-top" class="menu-bar"></nav>
+
+  <!-- Markdownを整形した内容、またはエラーメッセージがここに表示される -->
+  <div id="content">
+    <p class="loading">読み込み中...</p>
+  </div>
+
+  <!-- 下部メニューバー（上部と同じ内容） -->
+  <nav id="menu-bottom" class="menu-bar"></nav>
+
+  <!-- メニュー読込・生成を行うスクリプト -->
+  <script src="js/menu.js"></script>
+
+  <!-- Markdown読み込み・変換・エラー処理を行うスクリプト -->
+  <script src="js/script.js"></script>
+</body>
+</html>
